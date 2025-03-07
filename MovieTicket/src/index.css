@@ -1,0 +1,10 @@
+@import 'flowbite/dist/flowbite.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  font-family: 'poppins';
+  background:rgb(17, 24, 39);
+  color: rgb(5,5,5);
+}
