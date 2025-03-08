@@ -21,7 +21,7 @@ const Searched = () => {
   };
 
   return (
-    <div className='ml-[15px]'>
+    <div className='ml-[15px] mt-[15vh]'>
       <h2 className='text-2xl font-bold mb-4 text-white'>
         Search Results for: "{searchQuery}"
       </h2>

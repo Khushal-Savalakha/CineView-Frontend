@@ -262,7 +262,7 @@ const Booking = () => {
                       key={index}
                       className={`w-12 h-10 flex items-center justify-center rounded-t-lg cursor-pointer transition-all relative ${
                         isBooked
-                          ? "bg-gray-700 cursor-not-allowed opacity-50"
+                          ? "bg-red-700 cursor-not-allowed opacity-50"
                           : selectedSlots.includes(slot)
                           ? "bg-green-600 text-white"
                           : "bg-gray-600 hover:bg-gray-500 text-white"
@@ -291,7 +291,7 @@ const Booking = () => {
                   <span>Selected</span>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-4 h-4 bg-gray-700 opacity-50 mr-2 rounded"></div>
+                  <div className="w-4 h-4 bg-red-700 opacity-50 mr-2 rounded"></div>
                   <span>Booked</span>
                 </div>
               </div>

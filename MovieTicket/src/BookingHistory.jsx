@@ -26,6 +26,7 @@ const BookingHistory = () => {
   }, [user?.email]); // Added dependency to useEffect
 
   const fetchBookings = async () => {
+    console.log('Booking history:', user.email);
     try {
       const response = await axios.post(`${import.meta.env.VITE_URL}/booking/search/`, {
         email: user.email
@@ -176,25 +177,25 @@ const BookingHistory = () => {
     );
   }
 
-  if (error) {
-    return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black flex items-center justify-center text-white">
-        <div className="bg-gray-800/80 backdrop-blur-md p-10 rounded-xl shadow-xl border border-gray-700 max-w-md">
-          <div className="text-red-500 text-5xl mb-6 flex justify-center">⚠️</div>
-          <h2 className="text-2xl font-bold mb-4 text-center">Authentication Required</h2>
-          <p className="text-gray-300 mb-8 text-center">{error}</p>
-          <div className="flex justify-center">
-            <button 
-              onClick={() => navigate('/login')} 
-              className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 rounded-lg transition duration-300 font-semibold"
-            >
-              Sign In
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black flex items-center justify-center text-white">
+  //       <div className="bg-gray-800/80 backdrop-blur-md p-10 rounded-xl shadow-xl border border-gray-700 max-w-md">
+  //         <div className="text-red-500 text-5xl mb-6 flex justify-center">⚠️</div>
+  //         <h2 className="text-2xl font-bold mb-4 text-center">Authentication Required</h2>
+  //         <p className="text-gray-300 mb-8 text-center">{error}</p>
+  //         <div className="flex justify-center">
+  //           <button 
+  //             onClick={() => navigate('/login')} 
+  //             className="px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 rounded-lg transition duration-300 font-semibold"
+  //           >
+  //             Sign In
+  //           </button>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white py-12">
