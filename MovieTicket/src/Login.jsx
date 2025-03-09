@@ -1,9 +1,8 @@
-
-
 import React, { useState } from "react";
 import axios from "axios";
 import Logout from "./Logout";
 import { useNavigate } from "react-router-dom"; // Change this line
+import SEO from './components/SEO';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -54,6 +53,11 @@ export default function Login() {
 
   return (
     <>
+      <SEO 
+        title="Login"
+        description="Login to your CineView account to book movie tickets and manage your bookings"
+        keywords="login, signin, movie tickets, account"
+      />
       {user ? (
         <Logout />
       ) : (

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Searched from './components/Searched';
 import React, { Suspense, lazy } from 'react';
@@ -26,24 +27,26 @@ const Loading = () => (
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Suspense fallback={<Loading />}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/logout" element={<LogOut />} />
-        <Route path="/booking" element={<Bookings />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/searched" element={<Searched/>} />
-        <Route path="/account" element={<Account />} />
-        <Route path="/movie-detail" element={<MovieDetail />} /> {/* No changes needed here */}
-        <Route path="/Home" element={<Home />} />
-        <Route path="/bookingHistory" element={<BookingHistory />} />
-      </Routes>
-      </Suspense>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Navbar />
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<LogOut />} />
+            <Route path="/booking" element={<Bookings />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/searched" element={<Searched/>} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/movie-detail" element={<MovieDetail />} /> {/* No changes needed here */}
+            <Route path="/Home" element={<Home />} />
+            <Route path="/bookingHistory" element={<BookingHistory />} />
+          </Routes>
+        </Suspense>
+      </Router>
+    </HelmetProvider>
   );
 }
 
