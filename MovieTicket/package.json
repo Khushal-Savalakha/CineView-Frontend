@@ -16,6 +16,7 @@
     "@material-tailwind/react": "^2.1.9",
     "@reduxjs/toolkit": "^2.2.7",
     "@stripe/stripe-js": "^4.5.0",
+    "aws-amplify": "^6.13.4",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.7",
@@ -34,12 +35,18 @@
     "stripe": "^16.12.0"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.14.2",
+    "@aws-amplify/backend-cli": "^1.4.12",
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
+    "aws-cdk": "^2.1000.2",
+    "aws-cdk-lib": "^2.180.0",
+    "constructs": "^10.4.2",
     "daisyui": "^4.12.10",
+    "esbuild": "^0.25.0",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
@@ -48,10 +55,12 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10",
+    "terser": "^5.27.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
     "vite": "^5.4.1",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-imagemin": "^0.6.1",
-    "vite-plugin-pwa": "^0.17.4",
-    "terser": "^5.27.2"
+    "vite-plugin-pwa": "^0.17.4"
   }
 }

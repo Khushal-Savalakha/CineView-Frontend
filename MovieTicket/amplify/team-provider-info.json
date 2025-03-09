@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-movieticket-dev-74e7f-authRole",
+      "UnauthRoleArn": "arn:aws:iam::864899872604:role/amplify-movieticket-dev-74e7f-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::864899872604:role/amplify-movieticket-dev-74e7f-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-movieticket-dev-74e7f-deployment",
+      "UnauthRoleName": "amplify-movieticket-dev-74e7f-unauthRole",
+      "StackName": "amplify-movieticket-dev-74e7f",
+      "StackId": "arn:aws:cloudformation:ap-south-1:864899872604:stack/amplify-movieticket-dev-74e7f/156aa540-fd01-11ef-bbda-0607b10a86b5",
+      "AmplifyAppId": "d3kiv4r1wo6ibn"
+    }
+  }
+}
